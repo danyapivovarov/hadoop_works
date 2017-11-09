@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 import re
 
@@ -11,5 +13,5 @@ for line in sys.stdin:
         continue
     words = re.split("\W*\s+\W*", text, flags=re.UNICODE)
     for word in words:
-        print >> sys.stderr, "reporter:counter:Wiki stats,Total words,%d" % 1
+        #print >> sys.stderr, "reporter:counter:Wiki stats,Total words,%d" % 1
         print "%s\t%d" % (word.lower(), 1)
